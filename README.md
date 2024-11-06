@@ -1,1 +1,3 @@
-# midnight-university-society-community
+Test Account:
+//Username: admin 
+//Password: admin
