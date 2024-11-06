@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page | Midnight University Association</title>
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="img/favicon/favicon.ico"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      body,
+      html {
+        display: block;
+        margin: 0;
+      }
+
+      .bg-login {
+        background-image: url(img/univ-login.jpg);
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .bg-mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 1;
+      }
+
+      .title-header h1 {
+        color: rgb(204, 204, 204);
+        font-family: proxima-nova, sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        text-align: center;
+      }
+
+      .form-body {
+        position: relative;
+        padding: 10px 15px;
+        border: none;
+        background-color: rgba(19, 24, 98, 0.6);
+        border-radius: 12px;
+        font-weight: 600;
+        width: 600px;
+        font-family: sofia-pro, sans-serif;
+        z-index: 2;
+      }
+
+      a {
+        color: rgb(204, 204, 204);
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: rgb(84, 107, 171);
+      }
+
+      .form-body .form-login-main {
+        text-decoration: none;
+        color: rgb(204, 204, 204);
+      }
+
+      .form-body .form-register-main {
+        text-decoration: none;
+        color: rgb(204, 204, 204);
+      }
+
+      .nav-pills .nav-link {
+        color: rgb(204, 204, 204);
+      }
+
+      .nav-pills .nav-link.active {
+        background-color: rgb(204, 204, 204);
+        color: rgb(19, 24, 98);
+      }
+
+      .btn-submit {
+        border: none;
+        color: rgb(19, 24, 98);
+        background-color: rgb(204, 204, 204);
+        font-weight: 700;
+      }
+
+      .btn-submit:hover {
+        color: rgb(204, 204, 204);
+        background-color: transparent;
+      }
+
+      .btn-link i {
+        color: rgb(204, 204, 204);
+        background-color: transparent;
+      }
+
+      .btn-link i:hover {
+        color: rgb(84, 107, 171);
+      }
+
+      .nav-pills .nav-link {
+        border-radius: 0;
+      }
+      .nav-pills .nav-link:first-child {
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+      }
+      .nav-pills .nav-link:last-child {
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+
+      .form-check-input:checked {
+        accent-color: rgb(19, 24, 98);
+      }
+
+      .form-control {
+        background-color: rgb(204, 204, 204);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-login">
+      <div class="bg-mask"></div>
+      <div class="form-body">
+        <div class="title-header">
+          <h1 class="mb-4">Midnight University Association</h1>
+        </div>
+        <hr style="color: white" />
+        <!-- Pills navs -->
+        <ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link active"
+              id="tab-login"
+              data-bs-toggle="pill"
+              href="#pills-login"
+              role="tab"
+              aria-controls="pills-login"
+              aria-selected="true"
+              >Sign in</a
+            >
+          </li>
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link"
+              id="tab-register"
+              data-bs-toggle="pill"
+              href="#pills-register"
+              role="tab"
+              aria-controls="pills-register"
+              aria-selected="false"
+              >Sign up</a
+            >
+          </li>
+        </ul>
+        <!-- Pills navs -->
+
+        <!-- Pills content -->
+        <div class="tab-content">
+          <div
+            class="tab-pane fade show active"
+            id="pills-login"
+            role="tabpanel"
+            aria-labelledby="tab-login"
+          >
+            <form id="loginForm" class="form-login-main">
+              <div class="icons text-center mb-3">
+                <p>Sign in with:</p>
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-facebook-f"></i>
+                </button>
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-google"></i>
+                </button>
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-twitter"></i>
+                </button>
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-github"></i>
+                </button>
+              </div>
+
+              <p class="text-center">or</p>
+
+              <!-- Email input -->
+              <div class="form-outline mb-4">
+                <label class="form-label" for="loginName"
+                  >Email or Username:
+                </label>
+                <input
+                  type="text"
+                  id="loginName"
+                  class="form-control"
+                  required
+                />
+              </div>
+
+              <!-- Password input -->
+              <div class="form-outline mb-4">
+                <label class="form-label" for="loginPassword">Password: </label>
+                <input
+                  type="password"
+                  id="loginPassword"
+                  class="form-control"
+                  required
+                />
+              </div>
+
+              <!-- 2 column grid layout -->
+              <div class="row mb-4">
+                <div class="col-md-6 d-flex justify-content-center">
+                  <!-- Checkbox -->
+                  <div class="form-check mb-3 mb-md-0">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="loginCheck"
+                    />
+                    <label class="form-check-label" for="loginCheck">
+                      Remember me
+                    </label>
+                  </div>
+                </div>
+
+                <div class="col-md-6 d-flex justify-content-center">
+                  <!-- Simple link -->
+                  <a href="#pills-login" data-bs-toggle="pill"
+                    >Forgot password?</a
+                  >
+                </div>
+              </div>
+
+              <!-- Submit button -->
+              <button
+                type="submit"
+                class="btn-submit btn btn-primary btn-block mb-4"
+              >
+                Sign in
+              </button>
+
+              <!-- Register buttons -->
+              <div class="text-center">
+                <p>
+                  Not a member?
+                  <a href="#pills-register" data-bs-toggle="pill">Register</a>
+                </p>
+              </div>
+            </form>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="pills-register"
+            role="tabpanel"
+            aria-labelledby="tab-register"
+          >
+            <form class="form-register-main">
+              <div class="icons text-center mb-3">
+                <p>Sign up with:</p>
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-facebook-f"></i>
+                </button>
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-google"></i>
+                </button>
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-twitter"></i>
+                </button>
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-github"></i>
+                </button>
+              </div>
+
+              <p class="text-center">or</p>
+
+              <!-- Name input -->
+              <div class="form-outline mb-4">
+                <label class="form-label" for="registerName">Name: </label>
+                <input
+                  type="text"
+                  id="registerName"
+                  class="form-control"
+                  required
+                />
+              </div>
+
+              <!-- Username input -->
+              <div class="form-outline mb-4">
+                <label class="form-label" for="registerUsername"
+                  >Username:
+                </label>
+                <input
+                  type="text"
+                  id="registerUsername"
+                  class="form-control"
+                  required
+                />
+              </div>
+
+              <!-- Email input -->
+              <div class="form-outline mb-4">
+                <label class="form-label" for="registerEmail">Email: </label>
+                <input
+                  type="email"
+                  id="registerEmail"
+                  class="form-control"
+                  required
+                />
+              </div>
+
+              <!-- Password input -->
+              <div class="form-outline mb-4">
+                <label class="form-label" for="registerPassword"
+                  >Password:
+                </label>
+                <input
+                  type="password"
+                  id="registerPassword"
+                  class="form-control"
+                  required
+                />
+              </div>
+
+              <!-- Repeat Password input -->
+              <div class="form-outline mb-4">
+                <label class="form-label" for="registerRepeatPassword"
+                  >Repeat Password:
+                </label>
+                <input
+                  type="password"
+                  id="registerRepeatPassword"
+                  class="form-control"
+                  required
+                />
+              </div>
+
+              <!-- Checkbox -->
+              <div class="form-check d-flex justify-content-center mb-4">
+                <input
+                  class="form-check-input me-2"
+                  type="checkbox"
+                  value=""
+                  id="registerCheck"
+                  aria-describedby="registerCheckHelpText"
+                  required
+                />
+                <label class="form-check-label" for="registerCheck">
+                  I have read and agree to the terms
+                </label>
+              </div>
+
+              <!-- Submit button -->
+              <button
+                type="submit"
+                class="btn-submit btn btn-primary btn-block mb-3"
+              >
+                Register
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Pills content -->
+
+    <script>
+      const users = [
+        {
+          name: "Administrator",
+          username: "admin",
+          email: "administrator@test.com",
+          password: "admin",
+        },
+      ];
+
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const username = document.getElementById("loginName").value;
+          const password = document.getElementById("loginPassword").value;
+
+          const user = users.find(
+            (user) =>
+              (user.username === username || user.email === username) &&
+              user.password === password
+          );
+
+          if (user) {
+            window.location.href = "home.html";
+          } else {
+            alert("Username atau password salah.");
+          }
+        });
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

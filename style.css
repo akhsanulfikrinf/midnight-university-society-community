@@ -1,0 +1,266 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 600;
+}
+
+.mask {
+  padding: 250px;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 800;
+}
+
+h1.mb-4 {
+  font-weight: 700;
+}
+
+.mask h1 {
+  color: rgb(204, 204, 204);
+}
+
+.mask .button-1 {
+  border: 1px solid;
+  background-color: transparent;
+  color: rgb(204, 204, 204);
+  font-weight: 600;
+}
+
+.mask .button-1:hover {
+  color: rgb(84, 107, 171);
+}
+
+/* Color of the links BEFORE scroll */
+.navbar-scroll .nav-link,
+.navbar-scroll .navbar-toggler-icon,
+.navbar-scroll .navbar-brand {
+  color: rgb(204, 204, 204);
+}
+
+/* Color of the navbar BEFORE scroll */
+.navbar-scroll {
+  background-color: transparent;
+  transition: 0.3s ease;
+}
+
+/* Color of the links AFTER scroll */
+.navbar-scrolled .nav-link,
+.navbar-scrolled .navbar-toggler-icon,
+.navbar-scroll .navbar-brand {
+  color: rgb(204, 204, 204);
+}
+
+/* Color of the navbar AFTER scroll */
+.navbar-scrolled {
+  background-color: rgba(19, 24, 98, 0.7);
+  transition: 0.3s ease;
+}
+
+/* An optional height of the navbar AFTER scroll */
+.navbar.navbar-scroll.navbar-scrolled {
+  padding-top: auto;
+  padding-bottom: auto;
+}
+.navbar .container .logo {
+  width: 60px;
+  height: 60px;
+}
+
+.navbar-nav .nav-item .nav-link {
+  font-family: sofia-pro, sans-serif;
+  font-weight: 700;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: rgb(84, 107, 171);
+}
+
+.title-content {
+  background-color: rgb(19, 24, 98);
+  border-bottom: 4px solid rgb(46, 68, 130);
+  color: rgb(204, 204, 204);
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.content-1 {
+  background-color: rgb(84, 107, 171);
+}
+
+.content-2 {
+  background-color: rgb(84, 107, 171);
+}
+
+.content-3 {
+  background-color: rgb(84, 107, 171);
+}
+
+.benefit {
+  gap: 5px;
+  font-family: sofia-pro, sans-serif;
+}
+
+.card-benefit {
+  border: none;
+  border-radius: 3px;
+  background-color: rgb(204, 204, 204);
+  color: rgb(19, 24, 98);
+  padding: 10px 20px;
+  width: 412px;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-benefit h2 {
+  font-size: 22px;
+}
+
+.card-benefit p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.card .card-body {
+  background-color: rgb(204, 204, 204);
+}
+
+.content-icon {
+  background-color: transparent;
+  color: rgb(19, 24, 98);
+  height: 2rem;
+  width: 2rem;
+  font-size: 2rem;
+}
+
+.img-activity {
+  object-fit: contain;
+  height: 500px;
+}
+
+.testimony-content {
+  font-family: sofia-pro, sans-serif;
+  font-weight: 600;
+}
+
+.testimony-text {
+  color: rgb(19, 24, 98);
+}
+
+.text-muted {
+  color: rgb(19, 24, 98);
+}
+
+.footer {
+  background-color: rgb(19, 24, 98);
+  color: rgb(204, 204, 204);
+  font-size: 18px;
+  font-weight: 700;
+  padding-top: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Style for the carousel */
+.carousel-item img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive Styles for Small Screens */
+@media (max-width: 768px) {
+  /* Navbar adjustments */
+  .navbar .container .logo {
+    width: 50px;
+    height: 50px;
+  }
+  .navbar-nav .nav-item .nav-link {
+    font-size: 14px;
+  }
+
+  /* Header mask text */
+  .mask {
+    padding: 120px 0;
+  }
+  .mask h1 {
+    font-size: 24px;
+  }
+  .mask .button-1 {
+    font-size: 14px;
+  }
+
+  /* Adjustments for 'Benefit' and 'Activity' sections */
+  .benefit {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .card-benefit {
+    width: 100%;
+    padding: 15px;
+  }
+  .card-benefit h2 {
+    font-size: 18px;
+  }
+  .card-benefit p {
+    font-size: 14px;
+  }
+
+  /* Carousel images */
+  .img-activity {
+    height: 300px;
+  }
+
+  /* Testimonial cards */
+  .testimony-content .card {
+    width: 100%;
+  }
+  .testimony-text {
+    font-size: 14px;
+  }
+  .text-muted {
+    font-size: 12px;
+  }
+
+  /* Footer adjustments */
+  .footer {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+
+  /* Container paddings */
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* Title content section */
+  .title-content h1 {
+    font-size: 20px;
+    padding: 5px 0;
+  }
+}
